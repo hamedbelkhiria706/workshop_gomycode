@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 4 : L'Atelier Pratique — Workshop IA & Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation principale -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        🤖 IA & Commerce <span class="brand-badge">Workshop</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="probleme.html">1. Le Problème</a></li>
+        <li><a href="solution.html">2. La Solution IA</a></li>
+        <li><a href="impact.html">3. Les Bénéfices</a></li>
+        <li><a href="atelier.html" class="active">4. Atelier Pratique</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- En-tête du Module -->
+  <header>
+    <span class="module-badge">Module 4 sur 4</span>
+    <h1>L'Atelier Pratique : Feuille de Route</h1>
+    <p class="subtitle">Mettre les mains dans le code : concevoir, entraîner et valider votre modèle</p>
+  </header>
+
+  <!-- Contenu Principal -->
+  <main class="container">
+    
+    <!-- Les 3 étapes pratiques -->
+    <section>
+      <h2>Les 3 étapes clés du projet</h2>
+      <p class="lead">Voici les étapes guidées que chaque participant ou équipe réalise durant l'atelier :</p>
+      
+      <div class="grid">
+        <div class="card blue-border">
+          <h3>1. Trouver les données</h3>
+          <p>Télécharger un jeu de données de ventes public (par exemple sur Kaggle : <em>Store Sales Forecasting</em> ou données de boulangerie/retail). Nettoyer les données et repérer les tendances saisonnières.</p>
+        </div>
+
+        <div class="card blue-border">
+          <h3>2. Construire un modèle</h3>
+          <p>Développer un premier modèle de prévision simple (moyenne mobile, régression linéaire, ou Random Forest). L'enrichir ensuite avec des variables calendaires (jours fériés, weekend, météo).</p>
+        </div>
+
+        <div class="card blue-border">
+          <h3>3. Mesurer et présenter</h3>
+          <p>Comparer les prévisions aux ventes réelles sur un jeu de test. Calculer l'erreur moyenne (MAE/RMSE) et créer un graphique visuel clair à présenter au reste de la promotion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist des Livrables -->
+    <section>
+      <h2>Livrables attendus pour l'atelier</h2>
+      <div class="solution-box">
+        <p><strong>📋 Votre checklist de fin de session :</strong></p>
+        <ul class="checklist">
+          <li><strong>Jeu de données préparé :</strong> Fichier CSV nettoyé comportant les dates et les quantités vendues par jour.</li>
+          <li><strong>Notebook ou Script Python :</strong> Code reproductible chargeant les données, entraînant le modèle et effectuant la prédiction.</li>
+          <li><strong>Graphique d'évaluation :</strong> Courbe superposant les ventes réelles et les prévisions générées par l'IA.</li>
+          <li><strong>Métrique de performance :</strong> Score d'erreur (MAE) chiffrant l'écart moyen par rapport à la réalité.</li>
+          <li><strong>Pitch de 5 minutes :</strong> Présentation du cas d'usage, des résultats obtenus et des recommandations pour le commerçant.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Boîte d'action / encouragement -->
+    <section>
+      <div class="workshop-activity">
+        <h4>🚀 Prêt à coder ?</h4>
+        <p>Ouvrez votre environnement de développement (Jupyter Notebook, Google Colab ou VS Code) et commencez par explorer le dataset fourni pour la session.</p>
+      </div>
+    </section>
+
+    <!-- Navigation entre pages -->
+    <div class="page-navigation">
+      <a href="impact.html" class="btn btn-outline">&larr; Module 3 : Les Bénéfices</a>
+      <a href="index.html" class="btn btn-primary">🏠 Revenir à l'accueil du Workshop</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Projet Workshop GoMyCode — Prévision des ventes avec l'IA</p>
+  </footer>
+
+</body>
+</html>
+
