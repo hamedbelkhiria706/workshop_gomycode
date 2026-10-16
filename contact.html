@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Support — Workshop IA & Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation principale -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        🤖 IA & Commerce <span class="brand-badge">Workshop</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="solution.html">La Solution IA</a></li>
+        <li><a href="impact.html">Les Bénéfices</a></li>
+        <li><a href="atelier.html">Atelier Pratique</a></li>
+        <li><a href="inscription.html">Inscription Démo</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- En-tête / Bannière -->
+  <header>
+    <span class="module-badge">Assistance & Échange</span>
+    <h1>Contactez l'Équipe du Projet</h1>
+    <p class="subtitle">Une question sur l'atelier, les modèles d'IA ou une envie d'échanger ? Nous sommes à votre écoute</p>
+  </header>
+
+  <!-- Contenu Principal -->
+  <main class="container">
+
+    <!-- Section Contact avec disposition 2 colonnes -->
+    <section>
+      <h2>Nos coordonnées & Formulaire d'échange</h2>
+      
+      <div class="contact-layout">
+        
+        <!-- Coordonnées et infos -->
+        <div class="contact-info-list">
+          <div class="contact-card">
+            <h4>📍 Campus & Hackerspace</h4>
+            <p><strong>GoMyCode Hackerspace</strong></p>
+            <p>Espace d'apprentissage & d'innovation technologique</p>
+          </div>
+
+          <div class="contact-card">
+            <h4>✉️ Adresse Email</h4>
+            <p>Pour toute question sur le workshop :</p>
+            <p><a href="mailto:contact@ia-commerce-workshop.com"><strong>contact@ia-commerce-workshop.com</strong></a></p>
+          </div>
+
+          <div class="contact-card">
+            <h4>📞 Téléphone & Assistance</h4>
+            <p>Support pédagogique & partenariats :</p>
+            <p><a href="tel:+33189542010"><strong>+33 (0)1 89 54 20 10</strong></a></p>
+          </div>
+
+          <div class="contact-card">
+            <h4>⏰ Disponibilité</h4>
+            <p>Du lundi au vendredi : 09h00 – 18h30</p>
+            <p>Réponse garantie sous 24 heures ouvrées</p>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact direct -->
+        <div class="form-container">
+          
+          <!-- Message de confirmation -->
+          <div id="contact-success-alert" class="alert-box alert-success">
+            <strong>✅ Message envoyé avec succès !</strong><br>
+            Merci <span id="contact-confirm-name"></span> pour votre message. Un membre de notre équipe vous répondra par email dans les plus brefs délais.
+          </div>
+
+          <form id="contact-form" onsubmit="handleContactSubmit(event)">
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Nom complet <span class="required">*</span></label>
+                <input type="text" id="contact-name" class="form-control" placeholder="Votre nom" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email <span class="required">*</span></label>
+                <input type="email" id="contact-email" class="form-control" placeholder="nom@exemple.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Objet de votre demande <span class="required">*</span></label>
+              <select id="contact-subject" class="form-control" required>
+                <option value="">-- Choisissez le sujet --</option>
+                <option value="workshop">Question sur le déroulement du workshop</option>
+                <option value="technique">Question technique (algorithmes, données, code)</option>
+                <option value="partenariat">Proposition de partenariat ou cas d'usage réel</option>
+                <option value="autre">Autre demande</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Votre message <span class="required">*</span></label>
+              <textarea id="contact-message" class="form-control" rows="5" placeholder="Bonjour, je souhaiterais en savoir plus sur..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="font-size: 1.05rem; padding: 13px 28px; width: 100%;">
+              📨 Envoyer mon message
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Foire Aux Questions (FAQ) -->
+    <section>
+      <h2>Questions fréquentes (FAQ)</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">❓ Faut-il être expert en Data Science pour suivre ce projet ?</div>
+          <div class="faq-answer">Non, absolument pas. Ce projet est conçu de manière pédagogique et accessible : les concepts sont illustrés concrètement avec des exemples du quotidien, et l'atelier de modélisation est guidé étape par étape.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">❓ Comment les données de ventes sont-elles collectées en conditions réelles ?</div>
+          <div class="faq-answer">Les données proviennent généralement de l'export du logiciel de caisse (fichiers CSV ou Excel) contenant les dates, les quantités vendues et les références des produits. L'algorithme se charge ensuite de les croiser avec le calendrier et la météo.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">❓ Le commerçant garde-t-il le contrôle sur ses commandes finales ?</div>
+          <div class="faq-answer">Oui, c'est un point central de notre philosophie : l'IA propose une recommandation chiffrée, mais c'est toujours le commerçant ou son responsable qui valide et ajuste les quantités avant envoi au fournisseur.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation entre pages -->
+    <div class="page-navigation">
+      <a href="inscription.html" class="btn btn-outline">&larr; Page Inscription Démo</a>
+      <a href="index.html" class="btn btn-primary">🏠 Revenir à l'accueil du Workshop</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Projet Workshop GoMyCode — Prévision des ventes avec l'IA</p>
+  </footer>
+
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      document.getElementById('contact-confirm-name').textContent = name;
+      
+      const alertBox = document.getElementById('contact-success-alert');
+      alertBox.style.display = 'block';
+      alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      document.getElementById('contact-form').reset();
+    }
+  </script>
+
+</body>
+</html>
+

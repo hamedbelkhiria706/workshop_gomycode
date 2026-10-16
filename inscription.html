@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription Démo — Workshop IA & Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation principale -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        🤖 IA & Commerce <span class="brand-badge">Workshop</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="solution.html">La Solution IA</a></li>
+        <li><a href="impact.html">Les Bénéfices</a></li>
+        <li><a href="atelier.html">Atelier Pratique</a></li>
+        <li><a href="inscription.html" class="active">Inscription Démo</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- En-tête / Bannière -->
+  <header>
+    <span class="module-badge">Démonstration & Inscription</span>
+    <h1>Testez la Démo IA & Réservez votre Session</h1>
+    <p class="subtitle">Expérimentez le simulateur de prévision en direct et inscrivez-vous pour tester la solution complète</p>
+  </header>
+
+  <!-- Contenu Principal -->
+  <main class="container">
+
+    <!-- Mini-simulateur interactif de démonstration -->
+    <section>
+      <h2>Aperçu interactif : Simulateur Démo IA</h2>
+      <div class="demo-box">
+        <h3>⚡ Simulateur d'aide à la décision en temps réel</h3>
+        <p>Ajustez les paramètres ci-dessous pour voir comment l'algorithme adapte instantanément ses prévisions de commandes selon la météo et le calendrier :</p>
+        
+        <div class="demo-controls">
+          <div class="form-group">
+            <label for="demo-sector">Type d'activité :</label>
+            <select id="demo-sector" class="form-control" onchange="updateDemoPrediction()">
+              <option value="boulangerie">🥖 Boulangerie artisanale</option>
+              <option value="epicerie">🍎 Épicerie de quartier</option>
+              <option value="restaurant">🍝 Restaurant / Traiteur</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="demo-day">Jour de la semaine :</label>
+            <select id="demo-day" class="form-control" onchange="updateDemoPrediction()">
+              <option value="lundi">Lundi (reprise calme)</option>
+              <option value="mercredi">Mercredi (journée famille)</option>
+              <option value="vendredi">Vendredi (forte affluence)</option>
+              <option value="samedi" selected>Samedi (pic hebdomadaire)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="demo-weather">Conditions météo :</label>
+            <select id="demo-weather" class="form-control" onchange="updateDemoPrediction()">
+              <option value="soleil" selected>☀️ Grand soleil & doux</option>
+              <option value="pluie">🌧️ Forte pluie continue</option>
+              <option value="froid">❄️ Vague de grand froid</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="demo-result">
+          <div class="demo-result-item">
+            <div id="res-sales" class="demo-result-number">340</div>
+            <div class="demo-result-label">Ventes estimées (unités)</div>
+          </div>
+          <div class="demo-result-item">
+            <div id="res-order" class="demo-result-number">355</div>
+            <div class="demo-result-label">Recommandation commande</div>
+          </div>
+          <div class="demo-result-item">
+            <div id="res-waste" class="demo-result-number">-32%</div>
+            <div class="demo-result-label">Gaspillage évité</div>
+          </div>
+          <div class="demo-result-item">
+            <div id="res-confidence" class="demo-result-number" style="color: #10b981;">94%</div>
+            <div class="demo-result-label">Indice de confiance IA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulaire d'inscription à la démo -->
+    <section>
+      <h2>Formulaire d'inscription à la démo personnalisée</h2>
+      <p class="lead">Réservez une démonstration individuelle de 15 minutes ou inscrivez votre commerce au programme pilote GoMyCode.</p>
+
+      <div class="form-container">
+        
+        <!-- Notification de succès -->
+        <div id="demo-success-alert" class="alert-box alert-success">
+          <strong>✅ Demande enregistrée avec succès !</strong><br>
+          Merci <span id="confirm-name"></span>. Notre équipe prépare votre accès à la démo personnalisée et vous contactera par email sous 24 heures ouvrées.
+        </div>
+
+        <form id="demo-form" onsubmit="handleDemoSubmit(event)">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Nom & Prénom <span class="required">*</span></label>
+              <input type="text" id="fullname" class="form-control" placeholder="Ex: Sarah Benali" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Nom du commerce ou projet <span class="required">*</span></label>
+              <input type="text" id="company" class="form-control" placeholder="Ex: Maison Benali & Co" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="business-type">Type de commerce <span class="required">*</span></label>
+              <select id="business-type" class="form-control" required>
+                <option value="">-- Sélectionnez un secteur --</option>
+                <option value="boulangerie">Boulangerie / Pâtisserie</option>
+                <option value="epicerie">Épicerie / Alimentation générale</option>
+                <option value="restaurant">Restauration / Café / Bar</option>
+                <option value="textile">Prêt-à-porter / Mode</option>
+                <option value="autre">Autre commerce de détail</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="demo-format">Format de démo souhaité</label>
+              <select id="demo-format" class="form-control">
+                <option value="visio">Visioconférence guidée (15 minutes)</option>
+                <option value="prototype">Lien d'accès au prototype en ligne</option>
+                <option value="atelier">Participation au prochain Workshop GoMyCode</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Adresse email professionnelle <span class="required">*</span></label>
+              <input type="email" id="email" class="form-control" placeholder="sarah@exemple.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Numéro de téléphone</label>
+              <input type="tel" id="phone" class="form-control" placeholder="+33 6 12 34 56 78">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Quelles sont vos problématiques actuelles de stocks ? (Optionnel)</label>
+            <textarea id="notes" class="form-control" placeholder="Ex : Nous avons beaucoup de pertes sur les produits frais en milieu de semaine..."></textarea>
+            <div class="form-hint">Vos informations restent strictement confidentielles et ne seront jamais partagées.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="font-size: 1.05rem; padding: 13px 28px; width: 100%;">
+            🚀 Confirmer mon inscription à la démo gratuite
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Avantages de la démo -->
+    <section>
+      <h2>Ce que comprend votre démonstration</h2>
+      <div class="grid">
+        <div class="card orange-border">
+          <h3>⏱️ 15 minutes chrono</h3>
+          <p>Une présentation concise et concrète, axée sur vos vrais chiffres sans jargon technique complexe.</p>
+        </div>
+        <div class="card orange-border">
+          <h3>🎯 Simulation sur vos chiffres</h3>
+          <p>Découvrez les économies réelles réalisables sur vos commandes dès le premier mois d'utilisation.</p>
+        </div>
+        <div class="card orange-border">
+          <h3>🤝 Sans engagement</h3>
+          <p>Accès 100% gratuit au prototype pour tester librement l'algorithme sur vos propres historiques de caisse.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation entre pages -->
+    <div class="page-navigation">
+      <a href="atelier.html" class="btn btn-outline">&larr; Module : L'Atelier Pratique</a>
+      <a href="contact.html" class="btn btn-primary">Une question ? Page Contact &rarr;</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Projet Workshop GoMyCode — Prévision des ventes avec l'IA</p>
+  </footer>
+
+  <!-- Script interactif du simulateur et du formulaire -->
+  <script>
+    function updateDemoPrediction() {
+      const sector = document.getElementById('demo-sector').value;
+      const day = document.getElementById('demo-day').value;
+      const weather = document.getElementById('demo-weather').value;
+
+      let base = 200;
+      if (sector === 'boulangerie') base = 300;
+      if (sector === 'epicerie') base = 180;
+      if (sector === 'restaurant') base = 120;
+
+      // Facteur jour
+      let dayFactor = 1.0;
+      if (day === 'lundi') dayFactor = 0.75;
+      if (day === 'mercredi') dayFactor = 1.1;
+      if (day === 'vendredi') dayFactor = 1.35;
+      if (day === 'samedi') dayFactor = 1.6;
+
+      // Facteur météo
+      let weatherFactor = 1.0;
+      if (weather === 'soleil') weatherFactor = 1.15;
+      if (weather === 'pluie') weatherFactor = 0.65;
+      if (weather === 'froid') weatherFactor = 0.85;
+
+      const sales = Math.round(base * dayFactor * weatherFactor);
+      const order = Math.round(sales * 1.05); // marge de sécurité 5%
+      const wasteAvoided = Math.min(38, Math.max(18, Math.round(25 + (1 - weatherFactor) * 20)));
+      const confidence = weather === 'soleil' ? 95 : (weather === 'pluie' ? 91 : 93);
+
+      document.getElementById('res-sales').textContent = sales;
+      document.getElementById('res-order').textContent = order;
+      document.getElementById('res-waste').textContent = '-' + wasteAvoided + '%';
+      document.getElementById('res-confidence').textContent = confidence + '%';
+    }
+
+    function handleDemoSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('fullname').value;
+      document.getElementById('confirm-name').textContent = name;
+      
+      const alertBox = document.getElementById('demo-success-alert');
+      alertBox.style.display = 'block';
+      alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      document.getElementById('demo-form').reset();
+    }
+  </script>
+
+</body>
+</html>
+
